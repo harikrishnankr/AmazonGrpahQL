@@ -1,0 +1,17 @@
+type Brand {
+  id: Int!,
+  name: String!,
+}
+
+type Query {
+  brands: [Brand],
+  brand(id: Int!): Brand,
+}
+
+input CreateBrandInput {
+  name: String!,
+}
+
+type Mutation {
+  createBrand(input: CreateBrandInput): Brand,
+}
